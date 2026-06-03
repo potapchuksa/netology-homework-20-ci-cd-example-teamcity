@@ -50,10 +50,6 @@ object Build : BuildType({
         }
         maven {
             id = "Maven2_1"
-
-            conditions {
-                equals("teamcity.build.branch", "master")
-            }
             goals = "clean deploy"
             userSettingsSelection = "settings.xml"
         }
